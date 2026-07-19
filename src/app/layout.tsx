@@ -43,9 +43,11 @@ export const metadata: Metadata = {
       "application/rss+xml": `${site.url}/feed.xml`,
     },
   },
-  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
-    : {}),
+  verification: {
+    google:
+      process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ??
+      "Y6tFLq3gjrNjHNUS_Lpw-cpUs6m2enUpEgf-fd8bHjE",
+  },
 };
 
 export default function RootLayout({
