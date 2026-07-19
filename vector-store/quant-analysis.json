@@ -2,7 +2,7 @@
   "NIFTY": {
     "symbol": "NIFTY",
     "underlyingValue": 24334.3,
-    "timestamp": "2026-07-19T14:54:47.044Z",
+    "timestamp": "2026-07-19T18:29:14.447Z",
     "isCached": false,
     "cacheAge": 0,
     "info": "Market closed. No cached data available. Run during market hours to seed cache.",
@@ -78,7 +78,7 @@
   "BANKNIFTY": {
     "symbol": "BANKNIFTY",
     "underlyingValue": 58521.4,
-    "timestamp": "2026-07-19T14:54:46.292Z",
+    "timestamp": "2026-07-19T18:29:14.202Z",
     "isCached": false,
     "cacheAge": 0,
     "info": "Market closed. No cached data available. Run during market hours to seed cache.",
@@ -777,30 +777,30 @@
   },
   "BITCOIN": {
     "symbol": "BTC-USD",
-    "currentPrice": 64565.6015625,
+    "currentPrice": 64377.921875,
     "open": 64794.25,
     "high": 64867.11328125,
     "low": 64263.3984375,
-    "volume": 15547497472,
-    "timestamp": "2026-07-19T14:54:43.375Z",
+    "volume": 15570595840,
+    "timestamp": "2026-07-19T18:29:12.495Z",
     "changes": {
       "day": {
-        "value": -231,
-        "pct": -0.3565001781415765
+        "value": -418.6796875,
+        "pct": -0.6461445159221192
       },
       "week": {
-        "pct": 1.2663195872296857
+        "pct": 0.971958026979855
       },
       "month": {
-        "pct": 1.6127669865847836
+        "pct": 1.317398370904931
       }
     },
     "technicals": {
-      "sma20": 63131,
-      "sma50": 63353,
-      "sma200": 73044,
-      "rsi14": 54.6,
-      "volatility20": 32.7,
+      "sma20": 63121,
+      "sma50": 63350,
+      "sma200": 73043,
+      "rsi14": 53.7,
+      "volatility20": 32.9,
       "atr14": 1652,
       "support": 57748,
       "resistance": 65508
@@ -1164,7 +1164,7 @@
       },
       {
         "d": "2026-07-19",
-        "c": 64566
+        "c": 64378
       }
     ],
     "trend": "BULLISH",
@@ -1172,12 +1172,12 @@
       {
         "indicator": "MA_CROSS",
         "signal": "BEARISH",
-        "detail": "20 SMA (63131) < 50 SMA (63353)"
+        "detail": "20 SMA (63121) < 50 SMA (63350)"
       },
       {
         "indicator": "RSI",
         "signal": "NEUTRAL",
-        "detail": "RSI 54.6 — neutral"
+        "detail": "RSI 53.7 — neutral"
       },
       {
         "indicator": "RESISTANCE",
@@ -1192,11 +1192,11 @@
         "regime": "QUIET_RANGE",
         "efficiency": 0.01,
         "annualizedVol": 32,
-        "move30d": 0.51,
+        "move30d": 0.21,
         "note": "Low-volatility range. Mean reversion regime; breakout trades fail more here."
       },
       "accuracy": {
-        "samples": 4,
+        "samples": 6,
         "hitRate": 50,
         "recent": [
           {
@@ -1222,6 +1222,18 @@
             "verdict": "BEARISH",
             "movePct": 0.04,
             "hit": false
+          },
+          {
+            "t": "2026-07-19T14:35:07.762Z",
+            "verdict": "BEARISH",
+            "movePct": 0.16,
+            "hit": false
+          },
+          {
+            "t": "2026-07-19T14:54:47.045Z",
+            "verdict": "BEARISH",
+            "movePct": -0.21,
+            "hit": true
           }
         ],
         "note": "Small sample. Treat hit rate as directional only."
@@ -1229,7 +1241,7 @@
     }
   },
   "_meta": {
-    "fetchedAt": "2026-07-19T14:54:47.050Z",
-    "fetchTimeMs": 5081
+    "fetchedAt": "2026-07-19T18:29:14.450Z",
+    "fetchTimeMs": 3584
   }
 }

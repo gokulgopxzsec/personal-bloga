@@ -7,10 +7,12 @@ import * as path from "path";
 import { embedOne, keywordVector, hybridScore } from "./embeddings.mjs";
 
 const VECTOR_STORE = path.join(process.cwd(), "vector-store", "index.json");
+const OBSIDIAN_STORE = path.join(process.cwd(), "vector-store", "obsidian-index.json");
 
 export function loadIndex() {
-  if (!fs.existsSync(VECTOR_STORE)) return [];
-  try { return JSON.parse(fs.readFileSync(VECTOR_STORE, "utf-8")); } catch { return []; }
+  const load = f => { try { return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf-8")) : []; } catch { return []; } };
+  // Web knowledge + private Obsidian notes, searched as one corpus
+  return [...load(VECTOR_STORE), ...load(OBSIDIAN_STORE)];
 }
 
 export async function retrieve(query, topK = 8) {

@@ -3,8 +3,12 @@
 // Two outputs: a console leaderboard, and vector-store/model-bench.json —
 // which doubles as raw material for "i benchmarked local llms" posts.
 //
+// Models containing "/" (e.g. oc/deepseek-v4-flash-free, auto/best-chat) are
+// routed through the OmniRoute gateway (needs OMNIROUTE_API_KEY); everything
+// else goes to Ollama. Both can be mixed in one --models run.
+//
 // Usage: node tools/model-bench.mjs ["topic"]
-//        node tools/model-bench.mjs --models qwen2.5:7b-instruct,llama3:8b-instruct-q4_K_M
+//        node tools/model-bench.mjs --models qwen2.5:7b-instruct,oc/big-pickle
 
 import * as fs from "fs";
 import * as path from "path";
@@ -25,7 +29,34 @@ async function listModels() {
   return (await res.json()).models.map(m => m.name);
 }
 
+const GATEWAY_URL = (process.env.OMNIROUTE_URL || "http://localhost:20128/v1").replace(/\/$/, "");
+
+async function generateViaGateway(model, prompt) {
+  const start = Date.now();
+  const res = await fetch(`${GATEWAY_URL}/chat/completions`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${process.env.OMNIROUTE_API_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model, stream: false,
+      messages: [{ role: "system", content: SYSTEM }, { role: "user", content: prompt }],
+      max_tokens: 1200, temperature: 0.9,
+    }),
+    signal: AbortSignal.timeout(120000),
+  });
+  if (!res.ok) throw new Error(`gateway ${res.status}: ${(await res.text()).slice(0, 120)}`);
+  const data = await res.json();
+  const seconds = Math.round((Date.now() - start) / 100) / 10;
+  const evalTokens = data.usage?.completion_tokens || 0;
+  return {
+    text: data.choices?.[0]?.message?.content || "",
+    seconds, evalTokens,
+    tokensPerSec: evalTokens ? Math.round((evalTokens / seconds) * 10) / 10 : null,
+    servedBy: data.model || model,
+  };
+}
+
 async function generateWith(model, prompt) {
+  if (model.includes("/")) return generateViaGateway(model, prompt);
   const start = Date.now();
   const res = await fetch(`${OLLAMA_URL}/api/chat`, {
     method: "POST",
@@ -48,8 +79,9 @@ async function generateWith(model, prompt) {
 
 export async function benchModels(topic = DEFAULT_TOPIC, only = null) {
   const profile = loadStyleProfile();
-  const all = await listModels();
-  const models = only ? all.filter(m => only.includes(m)) : all;
+  // Gateway models ("x/y") are taken as-is; bare names must be installed in Ollama
+  const all = await listModels().catch(() => []);
+  const models = only ? only.filter(m => m.includes("/") || all.includes(m)) : all;
   if (models.length === 0) {
     console.log("No Ollama models found. Install some: ollama pull llama3.1");
     return null;
@@ -71,6 +103,7 @@ export async function benchModels(topic = DEFAULT_TOPIC, only = null) {
       const rank = await rankContent(gen.text, { title: topic, description: topic, tags: ["ai"] }, profile);
       results.push({
         model,
+        servedBy: gen.servedBy,
         words: gen.text.split(/\s+/).length,
         seconds: gen.seconds,
         tokensPerSec: gen.tokensPerSec,
@@ -97,7 +130,8 @@ export async function benchModels(topic = DEFAULT_TOPIC, only = null) {
   if (ok.length >= 2) {
     const best = ok[0];
     console.log(`\n  Winner: ${best.model} — quality ${best.composite}/100 in ${best.seconds}s`);
-    console.log(`  Set it as default:  $env:OLLAMA_MODEL = "${best.model}"`);
+    const envVar = best.model.includes("/") ? "OMNIROUTE_MODEL" : "OLLAMA_MODEL";
+    console.log(`  Set it as default:  $env:${envVar} = "${best.model}"`);
   }
 
   const report = { benchedAt: new Date().toISOString(), topic, results };

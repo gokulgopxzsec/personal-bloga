@@ -1,0 +1,3 @@
+# Obsidian vaults to index into RAG (one path per line, # to disable)
+C:/Users/gokul/Documents/vault/gokuls
+C:/Users/gokul/kerala-biz-intel/keral-biz-rag

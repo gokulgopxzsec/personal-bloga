@@ -274,6 +274,8 @@ a{color:var(--accent);text-decoration:none}
 </div>
 
 <script>
+// all API calls carry the CSRF header the server requires on POST
+const _fetch=window.fetch;window.fetch=(u,o={})=>_fetch(u,{...o,headers:{...(o.headers||{}),"x-admin":"1"}});
 const $=id=>document.getElementById(id);
 let cur={dir:null,file:null};
 const fmt=(n,d=2)=>n==null?"—":Number(n).toLocaleString(undefined,{maximumFractionDigits:d});
@@ -342,6 +344,13 @@ detectProvider().then(p => { providerName = p ? p.name : null; });
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
   const json = (code, obj) => { res.writeHead(code, { "Content-Type": "application/json" }); res.end(JSON.stringify(obj)); };
+
+  // CSRF guard: mutating requests must carry the x-admin header, which
+  // browsers only attach from same-origin scripts (cross-origin attempts
+  // trigger a CORS preflight we never answer).
+  if (req.method === "POST" && req.headers["x-admin"] !== "1") {
+    return json(403, { error: "forbidden" });
+  }
 
   if (url.pathname === "/") { res.writeHead(200, { "Content-Type": "text/html" }); res.end(HTML); return; }
   if (url.pathname === "/api/state") { const s = getState(); s.provider = providerName; return json(200, s); }

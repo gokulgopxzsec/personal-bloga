@@ -8,6 +8,10 @@ import { embedTexts, keywordVector } from "./embeddings.mjs";
 
 const KNOWLEDGE_DIR = path.join(process.cwd(), "knowledge-base");
 const VECTOR_STORE = path.join(process.cwd(), "vector-store", "index.json");
+// Obsidian notes index — separate file, git-ignored: personal notes must never
+// end up in the (public) repo via the committed web index.
+const OBSIDIAN_STORE = path.join(process.cwd(), "vector-store", "obsidian-index.json");
+const VAULTS_FILE = path.join(KNOWLEDGE_DIR, "obsidian-vaults.txt");
 
 function chunkText(text, source, maxLen = 500) {
   const paragraphs = text.split("\n").filter(p => p.trim().length > 20);
@@ -75,9 +79,72 @@ export async function buildIndex({ rebuild = false } = {}) {
   return existing;
 }
 
+function scanVaultFiles(dir, out = []) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name.startsWith(".")) continue; // .obsidian, .trash
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) scanVaultFiles(full, out);
+    else if (entry.name.endsWith(".md")) out.push(full);
+  }
+  return out;
+}
+
+function cleanNote(raw) {
+  return raw
+    .replace(/^---\n[\s\S]*?\n---\n?/, "")          // frontmatter
+    .replace(/!\[\[([^\]]+)\]\]/g, "")               // embeds
+    .replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2")  // [[target|alias]] → alias
+    .replace(/\[\[([^\]]+)\]\]/g, "$1")             // [[wikilink]] → text
+    .replace(/```[\s\S]*?```/g, "")                 // code blocks
+    .replace(/^#+\s*/gm, "")                        // heading markers
+    .trim();
+}
+
+export async function buildObsidianIndex() {
+  if (!fs.existsSync(VAULTS_FILE)) {
+    console.log("No obsidian-vaults.txt — skipping Obsidian.");
+    return [];
+  }
+  const vaults = fs.readFileSync(VAULTS_FILE, "utf-8").split("\n")
+    .map(l => l.trim()).filter(l => l && !l.startsWith("#"));
+
+  const allChunks = [];
+  for (const vault of vaults) {
+    if (!fs.existsSync(vault)) { console.log(`  ✗ vault missing: ${vault}`); continue; }
+    const vaultName = path.basename(vault);
+    const files = scanVaultFiles(vault);
+    let count = 0;
+    for (const file of files) {
+      try {
+        const text = cleanNote(fs.readFileSync(file, "utf-8"));
+        if (text.length < 80) continue;
+        const rel = path.relative(vault, file).replace(/\\/g, "/");
+        for (const chunk of chunkText(text, `obsidian:${vaultName}/${rel}`)) {
+          allChunks.push({ ...chunk, keywords: keywordVector(chunk.text), sourceTitle: path.basename(file, ".md") });
+          count++;
+        }
+      } catch {}
+    }
+    console.log(`  ${vaultName}: ${files.length} notes → ${count} chunks`);
+  }
+
+  if (allChunks.length > 0) {
+    console.log(`\nEmbedding ${allChunks.length} note chunks...`);
+    const vecs = await embedTexts(allChunks.map(c => c.text), {
+      onProgress: (done, total) => process.stdout.write(`\r  ${done}/${total}`),
+    });
+    if (vecs) { allChunks.forEach((c, i) => { c.vec = vecs[i]; }); console.log(""); }
+  }
+  fs.writeFileSync(OBSIDIAN_STORE, JSON.stringify(allChunks));
+  console.log(`✓ Obsidian index: ${allChunks.length} chunks (git-ignored, stays private)`);
+  return allChunks;
+}
+
 const isMain = process.argv[1]?.includes("index-rag");
 if (isMain) {
   console.log("\n=== Semantic RAG Indexer ===\n");
   await buildIndex({ rebuild: process.argv.includes("--rebuild") });
+  console.log("\n── Obsidian vaults ──");
+  await buildObsidianIndex();
   console.log("\nQuery with: node tools/query-rag.mjs \"your question\"");
 }

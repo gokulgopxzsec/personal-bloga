@@ -3,3 +3,5 @@ out/
 .next/
 tsconfig.tsbuildinfo
 content/drafts/
+vector-store/obsidian-index.json
+.env

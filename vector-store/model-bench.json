@@ -1,0 +1,110 @@
+{
+  "benchedAt": "2026-07-19T18:04:18.183Z",
+  "topic": "how small indian sellers can use ai tools without spending money",
+  "results": [
+    {
+      "model": "oc/deepseek-v4-flash-free",
+      "error": "output too short"
+    },
+    {
+      "model": "oc/big-pickle",
+      "servedBy": "big-pickle",
+      "words": 533,
+      "seconds": 16.9,
+      "tokensPerSec": 53.9,
+      "shield": 69,
+      "composite": 72,
+      "scores": {
+        "humanness": 69,
+        "coherence": 92,
+        "rhythm": 77,
+        "density": 43,
+        "hookSeo": 88
+      },
+      "sample": "I used to think AI was for the big guys. For the tech giants in Bangalore or the funded startups with fancy offices. For small sellers like me, running a modest online shop from my second bedroom, it felt like a distant, expensive planet. Then I got serious about growing, and I realized I was leaving money and efficiency on the table. The good news is, you don’t need a massive budget to start. You"
+    },
+    {
+      "model": "aug/prism",
+      "error": "gateway 502: {\"error\":{\"message\":\"[502]: Auggie CLI exited with code 1: 'auggie' is not recognized as an internal or external command"
+    },
+    {
+      "model": "aug/claude-sonnet-4.6",
+      "error": "gateway 502: {\"error\":{\"message\":\"[502]: Auggie CLI exited with code 1: 'auggie' is not recognized as an internal or external command"
+    },
+    {
+      "model": "aug/claude-sonnet-4.6-thinking",
+      "error": "gateway 502: {\"error\":{\"message\":\"[502]: Auggie CLI exited with code 1: 'auggie' is not recognized as an internal or external command"
+    },
+    {
+      "model": "aug/kimi-k2.6",
+      "error": "gateway 502: {\"error\":{\"message\":\"[502]: Auggie CLI exited with code 1: 'auggie' is not recognized as an internal or external command"
+    },
+    {
+      "model": "auto/best-chat",
+      "servedBy": "big-pickle",
+      "words": 498,
+      "seconds": 20.1,
+      "tokensPerSec": 44.3,
+      "shield": 60.5,
+      "composite": 73,
+      "scores": {
+        "humanness": 60.5,
+        "coherence": 96,
+        "rhythm": 97,
+        "density": 41,
+        "hookSeo": 88
+      },
+      "sample": "AI tools are everywhere right now, and it's easy for small sellers to feel left behind. The headlines talk about billion-dollar valuations and corporate boardrooms. But here’s the thing: you don’t need a big budget to start using AI. You just need to know where to look.\n\nMy first piece of advice is to ignore the fancy paid software for now. The big companies are pouring money into AI, but much of "
+    },
+    {
+      "model": "auto/best-reasoning",
+      "servedBy": "big-pickle",
+      "words": 500,
+      "seconds": 29.1,
+      "tokensPerSec": 31.7,
+      "shield": 70.5,
+      "composite": 78,
+      "scores": {
+        "humanness": 70.5,
+        "coherence": 96,
+        "rhythm": 98,
+        "density": 48,
+        "hookSeo": 88
+      },
+      "sample": "I’ve been watching the AI hype from the sidelines for a while now. As a small seller in India, it feels like a game for the big players with huge budgets. The news is full of billion-dollar valuations and expensive tools, and it’s easy to think there’s nothing in it for someone like me. But I’ve been digging around, and I think that’s changing fast.\n\nThe reality is, AI isn't just for corporate gia"
+    },
+    {
+      "model": "auto/coding",
+      "servedBy": "big-pickle",
+      "words": 637,
+      "seconds": 28.2,
+      "tokensPerSec": 31,
+      "shield": 61.5,
+      "composite": 70,
+      "scores": {
+        "humanness": 61.5,
+        "coherence": 89,
+        "rhythm": 100,
+        "density": 30,
+        "hookSeo": 81
+      },
+      "sample": "I've been watching the AI space explode over the past year, and I'll be honest, most of it feels built for people with deep pockets. Enterprise dashboards, six-figure subscriptions, agents that cost more than my monthly rent. But here's what nobody talks about enough: a lot of the best AI tools available right now are completely free. And if you're a small seller in India trying to compete with bi"
+    },
+    {
+      "model": "qwen2.5:7b-instruct",
+      "words": 422,
+      "seconds": 38.5,
+      "tokensPerSec": 17.5,
+      "shield": 47,
+      "composite": 61,
+      "scores": {
+        "humanness": 47,
+        "coherence": 100,
+        "rhythm": 43,
+        "density": 50,
+        "hookSeo": 87
+      },
+      "sample": "As a small indie seller in India, navigating the vast landscape of artificial intelligence (AI) tools can seem like an uphill battle. With the recent surge in AI-powered products and services, it's natural to wonder how you can benefit from these technologies without breaking the bank. The good news is that there are several free or low-cost AI tools available that can help streamline your busines"
+    }
+  ]
+}
