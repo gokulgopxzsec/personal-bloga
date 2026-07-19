@@ -15,12 +15,22 @@ export default function BlogPage() {
   const { posts, totalPages } = getPostsForPage(allPosts, 1);
   return (
     <div>
-      <h1 className="mb-8 text-2xl font-bold text-zinc-900 dark:text-zinc-100">
-        Blog
-      </h1>
-      {posts.map((post) => (
-        <PostCard key={post.slug} post={post} />
-      ))}
+      <header className="mb-8">
+        <p className="mono-label text-zinc-500 dark:text-zinc-400">
+          all writing
+        </p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+          Writing
+        </h1>
+        <p className="prompt mt-2 font-mono text-xs text-zinc-500 dark:text-zinc-400">
+          {allPosts.length} posts, newest first
+        </p>
+      </header>
+      <div className="flex flex-col gap-4">
+        {posts.map((post) => (
+          <PostCard key={post.slug} post={post} />
+        ))}
+      </div>
       <Pagination currentPage={1} totalPages={totalPages} basePath="/blog" />
     </div>
   );

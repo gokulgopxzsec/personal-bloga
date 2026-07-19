@@ -151,7 +151,7 @@ main {
   html { scroll-behavior: auto; }
 }
 
-/* ── prose: clean, tech-flavored ── */
+/* ── prose: clean, tech-flavored, tuned for reading ── */
 .prose {
   --tw-prose-body: #3f3f46;
   --tw-prose-headings: #18181b;
@@ -161,8 +161,55 @@ main {
   --tw-prose-quotes: #52525b;
   --tw-prose-quote-borders: #059669;
   --tw-prose-hr: #e4e4e7;
-  font-size: 1.045rem;
-  line-height: 1.8;
+  font-size: 1.075rem;
+  line-height: 1.85;
+  max-width: 66ch;
+}
+.prose p {
+  margin-top: 1.1em;
+  margin-bottom: 1.1em;
+}
+/* lede: ease the reader in */
+.prose > p:first-child {
+  font-size: 1.16em;
+  line-height: 1.75;
+  color: var(--tw-prose-headings);
+}
+.prose h2 {
+  margin-top: 2.4em;
+  margin-bottom: 0.7em;
+  scroll-margin-top: 90px;
+}
+.prose h3 {
+  margin-top: 1.9em;
+  scroll-margin-top: 90px;
+}
+.prose hr {
+  margin: 3em auto;
+  width: 40%;
+  border-style: dashed;
+}
+.prose img {
+  border-radius: 12px;
+}
+.prose li {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+.prose li::marker {
+  color: var(--accent);
+}
+.prose strong {
+  font-weight: 650;
+}
+.prose table {
+  font-size: 0.9em;
+}
+.prose thead th {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.82em;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
 }
 @media (prefers-color-scheme: dark) {
   .prose {

@@ -69,9 +69,20 @@ export default async function PostPage({
             </div>
           )}
         </header>
-        <div className="prose prose-zinc max-w-none dark:prose-invert">
+        <div className="prose prose-zinc dark:prose-invert">
           <MDXRemote source={post.content} components={mdxComponents} />
         </div>
+        <footer className="mt-12 flex items-center justify-between border-t border-dashed border-[var(--hairline)] pt-6 font-mono text-xs">
+          <Link
+            href="/blog"
+            className="link-craft text-zinc-500 dark:text-zinc-400"
+          >
+            ← all writing
+          </Link>
+          <span className="text-zinc-400 dark:text-zinc-500">
+            thanks for reading<span className="text-[var(--accent)]">.</span>
+          </span>
+        </footer>
       </article>
       <RelatedPosts currentSlug={post.slug} tags={post.tags} />
       <GiscusComments term={post.title} />
