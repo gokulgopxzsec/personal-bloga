@@ -1,0 +1,53 @@
+{
+  "rankedAt": "2026-07-19T14:54:22.276Z",
+  "results": [
+    {
+      "file": "building-makeforme-in-public.mdx",
+      "title": "13 sellers 2 months 0 rupees from ads and i am still here",
+      "composite": 83,
+      "scores": {
+        "humanness": 76,
+        "coherence": 79,
+        "rhythm": 99,
+        "density": 68,
+        "hookSeo": 97
+      }
+    },
+    {
+      "file": "how-i-built-makeforme-tech-stack.mdx",
+      "title": "i chose the boring option every time and my app still works",
+      "composite": 77,
+      "scores": {
+        "humanness": 78,
+        "coherence": 36,
+        "rhythm": 99,
+        "density": 81,
+        "hookSeo": 81
+      }
+    },
+    {
+      "file": "india-stack-for-solopreneurs.mdx",
+      "title": "india stack is cool but everyone is building the same thing",
+      "composite": 77,
+      "scores": {
+        "humanness": 79,
+        "coherence": 57,
+        "rhythm": 100,
+        "density": 63,
+        "hookSeo": 84
+      }
+    },
+    {
+      "file": "things-nobody-tells-you-about-first-10-customers.mdx",
+      "title": "things nobody tells you about your first 10 customers",
+      "composite": 75,
+      "scores": {
+        "humanness": 83.5,
+        "coherence": 42,
+        "rhythm": 96,
+        "density": 53,
+        "hookSeo": 94
+      }
+    }
+  ]
+}

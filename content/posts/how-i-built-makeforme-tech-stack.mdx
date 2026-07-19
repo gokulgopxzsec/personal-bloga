@@ -1,0 +1,63 @@
+---
+title: "i chose the boring option every time and my app still works"
+description: "the tech stack behind makeforme.in. nothing fancy. everything works."
+date: "2026-07-12"
+tags: ["technology", "saas", "building-in-public"]
+published: true
+---
+
+people ask me what stack i used for makeforme.
+
+they expect something cool. rust. kubernetes. some ai thing probably.
+
+i used next.js. tailwind. postgres on neon free tier. razorpay. cloudflare pages.
+
+boring. i know.
+
+## why
+
+because i am one person. i cannot afford to learn a new framework every time something breaks.
+
+next.js is boring. everyone knows it. if i get hit by a bus tomorrow someone else can pick up the codebase and know what is happening.
+
+tailwind is boring. class names in html. no magic.
+
+postgres is boring. it has been around for 30 years. it will outlive me.
+
+## what i learned
+
+the cool stack is for people with time to experiment.
+
+the boring stack is for people who need to ship.
+
+i need to ship.
+
+one time i spent 3 days trying to set up a queue system with redis. i did not need a queue system. i had 3 sellers. i could have just used a database table and a cron job.
+
+i wasted 3 days because i wanted to feel smart.
+
+now i use the stupidest solution that works.
+
+if i have 1000 sellers one day i will worry about queues then. right now i have 13. a database table works fine.
+
+## the stack
+
+next.js on cloudflare pages. static pages where possible. server functions where needed.
+
+tailwind css. no component library. i write my own buttons because it is faster than reading someone else's documentation.
+
+postgres on neon. free tier. 500mb. not even close to full.
+
+razorpay for payments. upi cards netbanking. one integration.
+
+that's it. no redis. no kubernetes. no docker. no message queue. no microservices.
+
+13 sellers. one macbook. a postgres database. and a lot of duct tape.
+
+and it works.
+
+## the lesson
+
+optimize for survival. not for scale.
+
+scale never comes as fast as you think. but dying from complexity is always faster than you expect.

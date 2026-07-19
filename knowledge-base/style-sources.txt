@@ -1,0 +1,13 @@
+# Human-written blogs for style learning (one URL per line)
+https://paulgraham.com/ds.html
+https://paulgraham.com/growth.html
+https://paulgraham.com/love.html
+https://paulgraham.com/think.html
+https://paulgraham.com/persistence.html
+https://sive.rs/ff
+https://sive.rs/hy
+https://sive.rs/dq
+https://www.kalzumeus.com/2012/01/23/salary-negotiation/
+https://blog.samaltman.com/how-to-be-successful
+https://blog.samaltman.com/productivity
+https://medium.com/@paulcanetti/why-i-quit-my-dream-job-8e63e952f6d5
