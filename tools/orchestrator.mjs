@@ -116,6 +116,11 @@ switch (command) {
     buildPlaybook(process.argv[3] || null);
     break;
   }
+  case "bench": {
+    const { benchModels } = await import("./model-bench.mjs");
+    await benchModels(rest || undefined);
+    break;
+  }
   case "autopilot":
     await autopilot();
     break;

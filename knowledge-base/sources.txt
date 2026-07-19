@@ -22,3 +22,24 @@ https://www.coindesk.com/price/bitcoin/
 https://inc42.com/startups/
 https://razorpay.com/blog/
 https://www.shopify.in/blog/ecommerce-tips
+
+# AI models, tools & automation
+https://www.anthropic.com/news
+https://openai.com/news/
+https://blog.google/technology/ai/
+https://huggingface.co/blog
+https://techcrunch.com/category/artificial-intelligence/
+https://venturebeat.com/ai/
+https://www.theverge.com/ai-artificial-intelligence
+https://simonwillison.net/
+
+# Digital marketing & SEO
+https://www.searchenginejournal.com/category/seo/
+https://backlinko.com/blog
+https://ahrefs.com/blog/
+https://moz.com/blog
+
+# Tech news
+https://news.ycombinator.com/
+https://www.theverge.com/tech
+https://arstechnica.com/gadgets/

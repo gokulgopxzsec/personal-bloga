@@ -69,13 +69,15 @@ function saveSource(url, data) {
   return filePath;
 }
 
-// Main
-const urls = process.argv.slice(2);
+// Main — only http(s) args count as URLs (orchestrator passes its command name through)
+const urls = process.argv.slice(2).filter(a => a.startsWith("http"));
 if (urls.length === 0) {
-  // Read from URLs file
+  // Read from URLs file, skipping comments and blank lines
   const urlFile = path.join(KNOWLEDGE_DIR, "sources.txt");
   if (fs.existsSync(urlFile)) {
-    urls.push(...fs.readFileSync(urlFile, "utf-8").split("\n").map(l => l.trim()).filter(Boolean));
+    urls.push(...fs.readFileSync(urlFile, "utf-8").split("\n")
+      .map(l => l.trim())
+      .filter(l => l.startsWith("http")));
   }
 }
 

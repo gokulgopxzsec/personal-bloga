@@ -18,7 +18,8 @@
     "events": "node tools/orchestrator.mjs events",
     "autopilot": "node tools/orchestrator.mjs autopilot",
     "distribute": "node tools/backlink-agent.mjs",
-    "generate": "node tools/generate-blog.mjs"
+    "generate": "node tools/generate-blog.mjs",
+    "bench": "node tools/model-bench.mjs"
   },
   "dependencies": {
     "@xenova/transformers": "^2.17.2",
