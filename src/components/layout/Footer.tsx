@@ -4,28 +4,27 @@ import { site } from "@/lib/constants";
 export function Footer() {
   return (
     <footer className="border-t border-[var(--hairline)]">
-      <div className="mx-auto flex max-w-3xl flex-col gap-6 px-5 py-12 sm:flex-row sm:items-end sm:justify-between sm:px-6">
+      <div className="mx-auto flex max-w-3xl flex-col gap-5 px-5 py-10 sm:flex-row sm:items-end sm:justify-between sm:px-6">
         <div>
-          <p className="font-display text-lg font-semibold text-stone-900 dark:text-stone-100">
-            Gokul<span className="text-amber-600">.</span>
+          <p className="font-mono text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+            <span className="text-[var(--accent)]">~/</span>gokul
           </p>
-          <p className="mt-1 max-w-xs text-sm leading-relaxed text-stone-500 dark:text-stone-400">
-            Building in public from India. Real numbers, real failures, no
-            press releases.
+          <p className="prompt mt-2 max-w-xs font-mono text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
+            building in public from india. real numbers, no press releases.
           </p>
         </div>
-        <div className="flex gap-5 text-sm text-stone-500 dark:text-stone-400">
-          <Link href={site.author.makeforme} className="link-editorial">
+        <div className="flex gap-4 font-mono text-xs text-zinc-500 dark:text-zinc-400">
+          <Link href={site.author.makeforme} className="link-craft">
             makeforme.in
           </Link>
-          <Link href={site.author.twitter} className="link-editorial">
-            Twitter
+          <Link href={site.author.twitter} className="link-craft">
+            twitter
           </Link>
-          <Link href={site.author.github} className="link-editorial">
-            GitHub
+          <Link href={site.author.github} className="link-craft">
+            github
           </Link>
-          <Link href="/feed.xml" className="link-editorial">
-            RSS
+          <Link href="/feed.xml" className="link-craft">
+            rss
           </Link>
         </div>
       </div>

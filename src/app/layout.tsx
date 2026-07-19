@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MetaPixel } from "@/components/MetaPixel";
@@ -14,13 +14,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  axes: ["opsz"],
-  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -58,12 +51,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-[var(--background)] font-sans text-stone-900 dark:text-stone-100">
+      <body className="flex min-h-full flex-col bg-[var(--background)] font-sans text-zinc-900 dark:text-zinc-100">
         <MetaPixel />
         <Header />
-        <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-12 sm:px-6">
+        <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-10 sm:px-6">
           {children}
         </main>
         <Footer />

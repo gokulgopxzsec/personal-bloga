@@ -43,25 +43,25 @@ export default async function PostPage({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: postJsonLd(post) }}
         />
-        <header className="mb-12 pt-4">
-          <div className="flex items-center gap-2 text-xs uppercase tracking-[0.14em] text-stone-400 dark:text-stone-500">
+        <header className="dot-grid -mx-5 mb-10 px-5 py-10 sm:-mx-6 sm:px-6">
+          <div className="flex items-center gap-2 font-mono text-[0.72rem] text-zinc-400 dark:text-zinc-500">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span aria-hidden>·</span>
             <span>{readingTime(post.content)}</span>
           </div>
-          <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.15] tracking-tight text-stone-900 sm:text-[2.75rem] dark:text-stone-100">
+          <h1 className="mt-3 max-w-2xl text-3xl font-bold leading-[1.15] tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-50">
             {post.title}
           </h1>
-          <p className="mt-5 max-w-xl font-display text-lg italic leading-relaxed text-stone-500 dark:text-stone-400">
+          <p className="prompt mt-4 max-w-xl font-mono text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
             {post.description}
           </p>
           {post.tags.length > 0 && (
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-5 flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <Link
                   key={tag}
                   href={`/tags/${tag}`}
-                  className="rounded-full border border-[var(--hairline)] px-3 py-1 text-xs font-medium text-stone-500 transition-colors hover:border-amber-600 hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-500"
+                  className="sticker text-zinc-500 dark:text-zinc-400"
                 >
                   {tag}
                 </Link>
@@ -69,7 +69,7 @@ export default async function PostPage({
             </div>
           )}
         </header>
-        <div className="prose prose-stone max-w-none dark:prose-invert">
+        <div className="prose prose-zinc max-w-none dark:prose-invert">
           <MDXRemote source={post.content} components={mdxComponents} />
         </div>
       </article>
