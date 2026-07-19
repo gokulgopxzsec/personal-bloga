@@ -1,11 +1,11 @@
 ---
 title: "things nobody tells you about your first 10 customers"
-canonical_url: https://blog.gokul.me/blog/things-nobody-tells-you-about-first-10-customers
+canonical_url: https://personal-bloga.gokulgopan815.workers.dev/blog/things-nobody-tells-you-about-first-10-customers
 published: true
 tags: startup, india, buildinpublic
 ---
 
-*Originally published on [my blog](https://blog.gokul.me/blog/things-nobody-tells-you-about-first-10-customers).*
+*Originally published on [my blog](https://personal-bloga.gokulgopan815.workers.dev/blog/things-nobody-tells-you-about-first-10-customers).*
 
 so i thought getting the first 10 customers would be the hard part.
 

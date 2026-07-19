@@ -1,11 +1,11 @@
 ---
 title: "i chose the boring option every time and my app still works"
-canonical_url: https://blog.gokul.me/blog/how-i-built-makeforme-tech-stack
+canonical_url: https://personal-bloga.gokulgopan815.workers.dev/blog/how-i-built-makeforme-tech-stack
 published: true
 tags: startup, india, buildinpublic
 ---
 
-*Originally published on [my blog](https://blog.gokul.me/blog/how-i-built-makeforme-tech-stack).*
+*Originally published on [my blog](https://personal-bloga.gokulgopan815.workers.dev/blog/how-i-built-makeforme-tech-stack).*
 
 people ask me what stack i used for makeforme.
 

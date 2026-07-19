@@ -35,9 +35,9 @@ Generated 2026-07-19. Lead post chosen by content-rank composite. Everything bel
 
 ---
 
-## 🥇 LEAD: 13 sellers 2 months 0 rupees from ads and i am still here (rank 74/100)
+## 🥇 LEAD: 13 sellers 2 months 0 rupees from ads and i am still here (rank 83/100)
 
-Post: https://blog.gokul.me/blog/building-makeforme-in-public
+Post: https://personal-bloga.gokulgopan815.workers.dev/blog/building-makeforme-in-public
 
 ### HN title options
 
@@ -91,7 +91,7 @@ Hyderabad folks building things: 13 sellers 2 months 0 rupees from ads and i am 
 
 
 
-wrote about it here if useful: https://blog.gokul.me/blog/building-makeforme-in-public
+wrote about it here if useful: https://personal-bloga.gokulgopan815.workers.dev/blog/building-makeforme-in-public
 ```
 
 ### Newsletter pitch
@@ -104,9 +104,9 @@ Hi [name],
 I'm Gokul, I build makeforme.in, a store builder for Indian small sellers. I write up everything with real numbers as I go.
 
 Just published: "13 sellers 2 months 0 rupees from ads and i am still here"
-https://blog.gokul.me/blog/building-makeforme-in-public
+https://personal-bloga.gokulgopan815.workers.dev/blog/building-makeforme-in-public
 
-i spent money on ads. got clicks. zero sales. word of mouth works better. who knew.
+i spent ₹1,978 on ads and got zero sales. then i did the math on why word of mouth beat paid for my 13 sellers. real numbers inside.
 
 If it fits [newsletter], feel free to quote or link any of it. Happy to share the raw numbers behind it too.
 
@@ -118,175 +118,9 @@ Canonical repost file (paste into dev.to/Hashnode): distribution/syndication/bui
 
 ---
 
-## india stack is cool but everyone is building the same thing (rank 70/100)
+## i chose the boring option every time and my app still works (rank 77/100)
 
-Post: https://blog.gokul.me/blog/india-stack-for-solopreneurs
-
-### HN title options
-
-1. india stack is cool but everyone is building the same thing
-2. india stack is cool but everyone is building the same thing (real numbers from a
-3. india stack is cool but everyone is building the same thing — lessons from 13 se
-
-### r/SaaS
-
-```
-india stack is cool but everyone is building the same thing
-
-
-every week some founder posts on linkedin "building on india stack" and it just means they added a razorpay button.
-
-i did the exact same thing. so i am not judging. just observing.
-
-full writeup with the numbers on my blog (link in comments if anyone wants it). brutal feedback welcome.
-```
-
-### r/IndiaBusiness
-
-```
-I run makeforme.in, been writing about the journey. This week: india stack is cool but everyone is building the same thing
-
-
-every week some founder posts on linkedin "building on india stack" and it just means they added a razorpay button.
-
-i did the exact same thing. so i am not judging. just observing.
-
-happy to answer anything about the numbers.
-```
-
-### r/indianstartups
-
-```
-india stack is cool but everyone is building the same thing (building in public, real numbers inside)
-
-
-every week some founder posts on linkedin "building on india stack" and it just means they added a razorpay button.
-
-i did the exact same thing. so i am not judging. just observing.
-
-wrote the full thing up on my blog. ask me anything.
-```
-
-### r/hyderabad
-
-```
-Hyderabad folks building things: india stack is cool but everyone is building the same thing
-
-
-
-wrote about it here if useful: https://blog.gokul.me/blog/india-stack-for-solopreneurs
-```
-
-### Newsletter pitch
-
-```
-Subject: real numbers from a 2-month-old Indian SaaS (for your newsletter)
-
-Hi [name],
-
-I'm Gokul, I build makeforme.in, a store builder for Indian small sellers. I write up everything with real numbers as I go.
-
-Just published: "india stack is cool but everyone is building the same thing"
-https://blog.gokul.me/blog/india-stack-for-solopreneurs
-
-upi integration is not a strategy. the real stuff is in the boring layers nobody writes about.
-
-If it fits [newsletter], feel free to quote or link any of it. Happy to share the raw numbers behind it too.
-
-Gokul
-makeforme.in
-```
-
-Canonical repost file (paste into dev.to/Hashnode): distribution/syndication/india-stack-for-solopreneurs.md
-
----
-
-## things nobody tells you about your first 10 customers (rank 69/100)
-
-Post: https://blog.gokul.me/blog/things-nobody-tells-you-about-first-10-customers
-
-### HN title options
-
-1. things nobody tells you about your first 10 customers
-2. things nobody tells you about your first 10 customers (real numbers from an Indi
-3. things nobody tells you about your first 10 customers — lessons from 13 sellers
-
-### r/SaaS
-
-```
-things nobody tells you about your first 10 customers
-
-
-so i thought getting the first 10 customers would be the hard part.
-
-turns out keeping them is harder. in a way i did not expect.
-
-full writeup with the numbers on my blog (link in comments if anyone wants it). brutal feedback welcome.
-```
-
-### r/IndiaBusiness
-
-```
-I run makeforme.in, been writing about the journey. This week: things nobody tells you about your first 10 customers
-
-
-so i thought getting the first 10 customers would be the hard part.
-
-turns out keeping them is harder. in a way i did not expect.
-
-happy to answer anything about the numbers.
-```
-
-### r/indianstartups
-
-```
-things nobody tells you about your first 10 customers (building in public, real numbers inside)
-
-
-so i thought getting the first 10 customers would be the hard part.
-
-turns out keeping them is harder. in a way i did not expect.
-
-wrote the full thing up on my blog. ask me anything.
-```
-
-### r/hyderabad
-
-```
-Hyderabad folks building things: things nobody tells you about your first 10 customers
-
-
-
-wrote about it here if useful: https://blog.gokul.me/blog/things-nobody-tells-you-about-first-10-customers
-```
-
-### Newsletter pitch
-
-```
-Subject: real numbers from a 2-month-old Indian SaaS (for your newsletter)
-
-Hi [name],
-
-I'm Gokul, I build makeforme.in, a store builder for Indian small sellers. I write up everything with real numbers as I go.
-
-Just published: "things nobody tells you about your first 10 customers"
-https://blog.gokul.me/blog/things-nobody-tells-you-about-first-10-customers
-
-they will find bugs you didnt know existed. they will ask for features you never thought of. and they will pay late.
-
-If it fits [newsletter], feel free to quote or link any of it. Happy to share the raw numbers behind it too.
-
-Gokul
-makeforme.in
-```
-
-Canonical repost file (paste into dev.to/Hashnode): distribution/syndication/things-nobody-tells-you-about-first-10-customers.md
-
----
-
-## i chose the boring option every time and my app still works (rank 68/100)
-
-Post: https://blog.gokul.me/blog/how-i-built-makeforme-tech-stack
+Post: https://personal-bloga.gokulgopan815.workers.dev/blog/how-i-built-makeforme-tech-stack
 
 ### HN title options
 
@@ -340,7 +174,7 @@ Hyderabad folks building things: i chose the boring option every time and my app
 
 
 
-wrote about it here if useful: https://blog.gokul.me/blog/how-i-built-makeforme-tech-stack
+wrote about it here if useful: https://personal-bloga.gokulgopan815.workers.dev/blog/how-i-built-makeforme-tech-stack
 ```
 
 ### Newsletter pitch
@@ -353,7 +187,7 @@ Hi [name],
 I'm Gokul, I build makeforme.in, a store builder for Indian small sellers. I write up everything with real numbers as I go.
 
 Just published: "i chose the boring option every time and my app still works"
-https://blog.gokul.me/blog/how-i-built-makeforme-tech-stack
+https://personal-bloga.gokulgopan815.workers.dev/blog/how-i-built-makeforme-tech-stack
 
 the tech stack behind makeforme.in. nothing fancy. everything works.
 
@@ -364,6 +198,172 @@ makeforme.in
 ```
 
 Canonical repost file (paste into dev.to/Hashnode): distribution/syndication/how-i-built-makeforme-tech-stack.md
+
+---
+
+## india stack is cool but everyone is building the same thing (rank 77/100)
+
+Post: https://personal-bloga.gokulgopan815.workers.dev/blog/india-stack-for-solopreneurs
+
+### HN title options
+
+1. india stack is cool but everyone is building the same thing
+2. india stack is cool but everyone is building the same thing (real numbers from a
+3. india stack is cool but everyone is building the same thing — lessons from 13 se
+
+### r/SaaS
+
+```
+india stack is cool but everyone is building the same thing
+
+
+every week some founder posts on linkedin "building on india stack" and it just means they added a razorpay button.
+
+i did the exact same thing. so i am not judging. just observing.
+
+full writeup with the numbers on my blog (link in comments if anyone wants it). brutal feedback welcome.
+```
+
+### r/IndiaBusiness
+
+```
+I run makeforme.in, been writing about the journey. This week: india stack is cool but everyone is building the same thing
+
+
+every week some founder posts on linkedin "building on india stack" and it just means they added a razorpay button.
+
+i did the exact same thing. so i am not judging. just observing.
+
+happy to answer anything about the numbers.
+```
+
+### r/indianstartups
+
+```
+india stack is cool but everyone is building the same thing (building in public, real numbers inside)
+
+
+every week some founder posts on linkedin "building on india stack" and it just means they added a razorpay button.
+
+i did the exact same thing. so i am not judging. just observing.
+
+wrote the full thing up on my blog. ask me anything.
+```
+
+### r/hyderabad
+
+```
+Hyderabad folks building things: india stack is cool but everyone is building the same thing
+
+
+
+wrote about it here if useful: https://personal-bloga.gokulgopan815.workers.dev/blog/india-stack-for-solopreneurs
+```
+
+### Newsletter pitch
+
+```
+Subject: real numbers from a 2-month-old Indian SaaS (for your newsletter)
+
+Hi [name],
+
+I'm Gokul, I build makeforme.in, a store builder for Indian small sellers. I write up everything with real numbers as I go.
+
+Just published: "india stack is cool but everyone is building the same thing"
+https://personal-bloga.gokulgopan815.workers.dev/blog/india-stack-for-solopreneurs
+
+upi integration is not a strategy. the real stuff is in the boring layers nobody writes about.
+
+If it fits [newsletter], feel free to quote or link any of it. Happy to share the raw numbers behind it too.
+
+Gokul
+makeforme.in
+```
+
+Canonical repost file (paste into dev.to/Hashnode): distribution/syndication/india-stack-for-solopreneurs.md
+
+---
+
+## things nobody tells you about your first 10 customers (rank 75/100)
+
+Post: https://personal-bloga.gokulgopan815.workers.dev/blog/things-nobody-tells-you-about-first-10-customers
+
+### HN title options
+
+1. things nobody tells you about your first 10 customers
+2. things nobody tells you about your first 10 customers (real numbers from an Indi
+3. things nobody tells you about your first 10 customers — lessons from 13 sellers
+
+### r/SaaS
+
+```
+things nobody tells you about your first 10 customers
+
+
+so i thought getting the first 10 customers would be the hard part.
+
+turns out keeping them is harder. in a way i did not expect.
+
+full writeup with the numbers on my blog (link in comments if anyone wants it). brutal feedback welcome.
+```
+
+### r/IndiaBusiness
+
+```
+I run makeforme.in, been writing about the journey. This week: things nobody tells you about your first 10 customers
+
+
+so i thought getting the first 10 customers would be the hard part.
+
+turns out keeping them is harder. in a way i did not expect.
+
+happy to answer anything about the numbers.
+```
+
+### r/indianstartups
+
+```
+things nobody tells you about your first 10 customers (building in public, real numbers inside)
+
+
+so i thought getting the first 10 customers would be the hard part.
+
+turns out keeping them is harder. in a way i did not expect.
+
+wrote the full thing up on my blog. ask me anything.
+```
+
+### r/hyderabad
+
+```
+Hyderabad folks building things: things nobody tells you about your first 10 customers
+
+
+
+wrote about it here if useful: https://personal-bloga.gokulgopan815.workers.dev/blog/things-nobody-tells-you-about-first-10-customers
+```
+
+### Newsletter pitch
+
+```
+Subject: real numbers from a 2-month-old Indian SaaS (for your newsletter)
+
+Hi [name],
+
+I'm Gokul, I build makeforme.in, a store builder for Indian small sellers. I write up everything with real numbers as I go.
+
+Just published: "things nobody tells you about your first 10 customers"
+https://personal-bloga.gokulgopan815.workers.dev/blog/things-nobody-tells-you-about-first-10-customers
+
+they will find bugs you didnt know existed. they will ask for features you never thought of. and they will pay late.
+
+If it fits [newsletter], feel free to quote or link any of it. Happy to share the raw numbers behind it too.
+
+Gokul
+makeforme.in
+```
+
+Canonical repost file (paste into dev.to/Hashnode): distribution/syndication/things-nobody-tells-you-about-first-10-customers.md
 
 ---
 

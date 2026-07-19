@@ -1,11 +1,11 @@
 ---
 title: "india stack is cool but everyone is building the same thing"
-canonical_url: https://blog.gokul.me/blog/india-stack-for-solopreneurs
+canonical_url: https://personal-bloga.gokulgopan815.workers.dev/blog/india-stack-for-solopreneurs
 published: true
 tags: startup, india, buildinpublic
 ---
 
-*Originally published on [my blog](https://blog.gokul.me/blog/india-stack-for-solopreneurs).*
+*Originally published on [my blog](https://personal-bloga.gokulgopan815.workers.dev/blog/india-stack-for-solopreneurs).*
 
 every week some founder posts on linkedin "building on india stack" and it just means they added a razorpay button.
 

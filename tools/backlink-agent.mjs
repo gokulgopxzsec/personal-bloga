@@ -22,7 +22,7 @@ import matter from "gray-matter";
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 const OUT_DIR = path.join(process.cwd(), "distribution");
 const RANK_FILE = path.join(process.cwd(), "vector-store", "content-rank.json");
-const SITE = process.env.SITE_URL || "https://blog.gokul.me";
+const SITE = process.env.SITE_URL || "https://personal-bloga.gokulgopan815.workers.dev";
 
 // ── Free backlink opportunity map (DR = rough domain rating) ──
 const OPPORTUNITIES = [
