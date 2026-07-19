@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers config — serves the static export in out/ as assets.
+  // The dashboard build runs: npm run build:fast (set in Settings → Build),
+  // then: npx wrangler deploy
+  "name": "personal-bloga",
+  "compatibility_date": "2026-07-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
